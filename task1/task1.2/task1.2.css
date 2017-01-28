@@ -1,0 +1,13 @@
+body, pre {
+	font-family: Times New Roman;
+}
+h1, h2 {
+	text-align: center;
+}
+ol {
+	padding: 0;
+    margin-left: 20px;
+}
+.formula {
+	line-height: 2;
+}

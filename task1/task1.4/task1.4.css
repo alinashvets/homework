@@ -1,0 +1,26 @@
+.first {
+	position: relative;
+	border: 5px solid black; 
+	height: 300px; 
+	width: 500px;
+}
+.second {
+	position: absolute;
+	right: 0;
+	margin-top: 45px;
+	border-top: 5px solid black; 
+	border-left: 5px solid black; 
+	border-bottom: 5px solid black;  
+	height: 200px; 
+	width: 400px;
+}
+.third {
+	position: absolute;
+	margin-top: 45px;
+	border-top: 5px solid black; 
+	border-right: 5px solid black; 
+	border-bottom: 5px solid black;  
+	border-left: 2px solid black;  
+	height: 100px; 
+	width: 300px;
+}

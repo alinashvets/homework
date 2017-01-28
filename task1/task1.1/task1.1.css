@@ -1,0 +1,21 @@
+@font-face {
+	font-family: Roboto;
+	src: url(fonts/Roboto/Roboto-Medium.ttf);
+}
+@font-face {
+	font-family: Indie_Flower;
+	src: url(fonts/Indie_Flower/IndieFlower.ttf);
+}
+@font-face {
+	font-family: Bungee_Shade;
+	src: url(fonts/Bungee_Shade/BungeeShade-Regular.ttf);
+}
+h1 {
+	font-family: Bungee_Shade;
+}
+h2 {
+	font-family: Roboto;
+}
+p {
+	font-family: Indie_Flower;
+}
