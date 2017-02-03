@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Task2.2</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var age = +prompt("Введіть Ваш вік", "");
+      var adult = 18;
+
+      if (age >= 0 && age <= 6) {
+        document.write("Вам ще зарано знати про алкоголь");
+      }
+      else if (age > 6 && age <= 12) {
+        document.write("Ви повинні знати, що алкоголь - це для дорослих");
+      }
+      else if (age > 12 && age <= adult) {
+        document.write("Ви повинні знати, що вживання алкоголю в юному віці негативно впливає на організм");
+      }
+      else if (age > adult) {
+        document.write("НАДМІРНЕ ВЖИВАННЯ АЛКОГОЛЮ ШКІДЛИВЕ ДЛЯ ВАШОГО ЗДОРОВ'Я");
+      }
+      else {
+            document.write("Ви ввели невірне значення");
+      }
+    </script>
+  </body>
+</html>

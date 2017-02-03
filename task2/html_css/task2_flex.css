@@ -1,0 +1,73 @@
+body {
+	background-color: lightgrey;
+}
+header, footer {
+	background-color: silver;
+	line-height: 70px;
+  	color: black;
+  	text-align: center;
+}
+header {
+	margin-bottom: 20px;
+}
+footer {
+	margin-top: 20px;
+}
+.main {
+	border: 20px solid navy;
+  	display: -webkit-box;
+  	display: -moz-box;
+  	display: -ms-flexbox;
+  	display: -webkit-flex;
+ 	display: flex;
+  	-webkit-flex-flow: row wrap;
+  	justify-content: center;
+}
+.container1, .container2, .container3, .container4, .container5  {
+	width: 300px;
+	height: 70px;
+	line-height: 35px;
+	color: black;
+	text-align: center;
+	flex-grow: 1;
+}
+.container1 {
+  	background: coral;
+}
+.container2 {
+  	background: blueviolet;
+}
+.container3 {
+  	background: firebrick;
+}
+.container4 {
+ 	background: aqua;
+}
+.container5 {
+  	background: steelblue;
+}
+
+@media ( min-width: 656px ) and ( max-width: 956px ) {
+	.container1, .container2, .container3, .container4, .container5 {
+		flex-grow: 1;
+	}
+	.container4 {
+		order: 5;
+	}
+}
+@media all and ( min-width: 956px ) {
+	.container1, .container2, .container3, .container4, .container5 {
+		flex-grow: 1;
+	}
+	.container4 {
+		order: 0;
+	}
+}
+@media all and ( min-width: 1216px ) {
+	.container1, .container2, .container3 {
+		flex-grow: 1;
+	}
+	.container4, .container5{
+		flex: 12 3 30em;
+	}
+}
