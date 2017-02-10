@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Task3_2</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+      var sortType = +prompt("Як Ви бажаєте відсортувати числа в масиві: 1 - в порядку зростання; 2 - в порядку спадання");
+      var array = [898, -12, 3, 67, 0, -18, 7];
+
+      switch(sortType) {
+
+        case 1: 
+          {
+            function mySort(a, b) {
+            return a - b;
+          }
+            array.sort(mySort);
+            document.write(array);
+          }
+          break;
+
+      case 2: 
+          {
+            function mySort(a, b) {
+            return b - a;
+          }
+            array.sort(mySort);
+            document.write(array);
+          }
+          break;
+
+      default:
+          {
+            document.write("Ви не бажаєте сортувати даний масив: " + array);
+          }
+          break;
+    }
+      
+
+    </script>
+  </body>
+</html>
