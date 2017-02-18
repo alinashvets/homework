@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+ 	<title>Queue</title>
+   		<link rel="stylesheet" href="reset.css">
+   		<link rel="stylesheet" href="queue.css">   
+   		<meta charset="utf-8">
+</head>
+	<body>
+ 		<div class="main">
+ 			<h1>Вітаємо!</h1>
+ 		</div>
+ 		<div class="variants">
+ 			<ul>
+ 				<li id="newPerson" onclick="ask()">заповнити форму</li>
+ 				<li id="showList" onclick="show()">список учасників</li>
+                <li id="sortList" onclick="sort()">вибрати фільтри</li>
+ 			</ul>
+ 		</div>
+		
+		<script type="text/javascript">
+            var persons = [{
+                name: "Alina",
+                surname: "Shvets",
+                age: 25,
+                occupation: "SEO",
+                languages: ["HTML/CSS", "javascript"],
+            },{
+                name: "Oleksandr",
+                surname: "Shvets",
+                age: 24,
+                occupation: "QA",
+                languages: ["HTML/CSS"]
+            }];
+        
+            var person = { 
+                name: undefined, 
+                surname: undefined, 
+                age: undefined,
+                occupation: undefined,
+                languages: [undefined]
+            }
+       
+
+            var newPerson = document.getElementById("newPerson");
+                newPerson.onclick = function(ask) {
+                    person.name = prompt("Ваше ім'я:");
+                    person.surname = prompt("Ваше прізвище:");
+                    person.age = prompt("Ваш вік:");
+                    person.occupation = prompt("Ваша професія:");
+                    person.languages = prompt("Якими мовами програмування Ви володієте?:");
+                    persons.push(person);
+                    person = { 
+                        name: undefined, 
+                        surname: undefined, 
+                        age: undefined,
+                        occupation: undefined,
+                        languages: [undefined]
+                    };
+
+                if (confirm("Бажаєте переглянути весь список учасників черги?")) {
+                    showImd();
+                } else {
+                    alert("Ви натиснули кнопку CANCEL")
+                }
+
+            };
+
+            var showList = document.getElementById("showList");
+                showList.onclick = function(show) {
+                    for (var i = 0 ; i < persons.length; i++) {
+                        for(item in persons[i]) {
+                            document.write(persons[i][item]+ "<br />");
+                        }
+                    }
+            };
+
+            function showImd() {
+                for (var i = 0 ; i < persons.length; i++) {
+                    for(item in persons[i]) {
+                        document.write(persons[i][item]+ "<br />");
+                    }
+                }
+            }
+
+
+
+            var sortList = document.getElementById("sortList");
+                sortList.onclick = function(sort) {
+
+            var start = prompt("Як Ви бажаєте відфільтрувати дані учасників: 1 - за іменем; 2 - за віком; 3 - відносно володіння мовами програмування", "");
+                switch (start) {
+                    case "1": {
+                        for(var i = 0; i < persons.length; i++) {
+                            document.write(persons[i].name + "<br />");
+                        }           
+                    }
+                    break;
+                    case "2": {
+                        for(var i = 0; i < persons.length; i++) {
+                            document.write(persons[i].age + "<br />");
+                        }
+                    }
+                    break;
+                    case "3": {
+                        for(var i = 0; i < persons.length; i++) {
+                            document.write(persons[i].languages + "<br />");
+                        }
+                    }
+                    break;
+                    default: {
+                    document.write("Повторіть спробу.");
+                    }
+                    break;
+                }
+
+            
+            };
+
+    </script>
+ 	</body> 
+</html>
