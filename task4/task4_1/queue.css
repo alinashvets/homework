@@ -1,0 +1,39 @@
+body {
+	background: url(main.jpg) no-repeat;
+	background-size: cover; 
+}
+@font-face {
+	font-family: Catamaran;
+	src: url(Catamaran/Catamaran-Light.ttf);
+}
+div {
+	font-family: Catamaran;
+	text-transform: uppercase;
+}
+.main {
+	margin: 120px 100px 58px 100px;
+	font-size: 50px;
+}
+.variants {margin-left: 100px;}
+.variants li {
+	display: inline-block;
+	vertical-align: middle;
+	background: #800000;
+	color: #FFF8DC;
+	width: 200px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	margin-bottom: 2px;
+	margin-top: 2px;
+	cursor: pointer;
+}
+.variants li:hover {
+	background: #CD5C5C;
+}
+table, tr, td {
+	border: 2px solid black;
+	padding: 5px;
+	margin-left: 100px;
+	margin-top: 15px;
+}

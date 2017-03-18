@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Task4_3</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+
+        function Shape(name) {
+            this.name = name;
+            this.getArea = function () { document.write("Площі фігур:" + "<br />")}
+            this.showName = function () { document.write(this.name + "<br />") }
+        }
+
+        function Square(width) {
+            this.name = "Квадрат";
+            this.width = width;
+            this.getArea = function () { 
+                return Math.pow(this.width, 2) }
+        }
+        function Rectangle(width, height) {
+            this.name = "Прямокутник";
+            this.width = width;
+            this.height = height;
+            this.getArea = function () { 
+                return this.width * this.height }
+        }
+        function Triangle(width, height) {
+            this.name = "Трикутник";
+            this.width = width;
+            this.height = height;
+            this.getArea = function () { 
+                return (this.width * this.height) / 2 }
+        }
+        function Circle(radius) {
+            this.name = "Круг";
+            this.radius = radius;
+            this.getArea = function () { 
+                return Math.PI * Math.pow(this.radius, 2) }
+        }
+
+        var shape = new Shape();
+
+        Square.prototype = shape;
+        Rectangle.prototype = shape;
+        Triangle.prototype = shape;
+        Circle.prototype = shape;
+
+        var sqr = new Square(7);
+        var rct = new Rectangle(5, 11);
+        var trn = new Triangle(4, 49);
+        var crc = new Circle(8);
+
+        shape.getArea();
+        
+        sqr.showName();
+        document.write(sqr.getArea() + "<br />");
+
+        rct.showName();
+        document.write(rct.getArea() + "<br />");
+
+        trn.showName();
+        document.write(trn.getArea() + "<br />");
+
+        crc.showName();
+        document.write(crc.getArea().toFixed(2) + "<br />");
+
+    </script>
+  </body>
+</html>
