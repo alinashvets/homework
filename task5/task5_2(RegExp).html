@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task5_2</title>
+    <meta charset="utf-8">
+    
+    <script type="text/javascript">
+        function highlightSearch() {
+        var text = document.getElementById("find").value;
+        var find = new RegExp("(\\b" + text + "\\b)", "gim");
+        var inSearchText = document.getElementById("searchtext").innerHTML;
+        var match = inSearchText.replace(/(<span>|<\/span>)/gim, "");
+        document.getElementById("searchtext").innerHTML = match;
+        var span = match.replace(find, "<span>$1</span>");
+        document.getElementById("searchtext").innerHTML = span;
+        }
+    </script>
+</head>
+<body>
+    <style type="text/css">
+        #searchtext span{
+            background-color: SeaGreen;
+            color: white;
+        }
+    </style>
+
+    <input id="find" type="text" size="10" maxlength="10"/>
+    <input type="button" value="Highlight" onclick="highlightSearch()"/>
+
+    <div id="searchtext">
+        <h1>What is the DOM?</h1>
+        <p>The DOM is a W3C (World Wide Web Consortium) standard.</p>
+        <p>The DOM defines a standard for accessing documents:</p>
+        <p><i>"The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document."</i></p>
+        <p>The W3C DOM standard is separated into 3 different parts:</p>
+            <ul>
+                <li>Core DOM - standard model for all document types</li>
+                <li>XML DOM - standard model for XML documents</li>
+                <li>HTML DOM - standard model for HTML documents</li>
+            </ul>   
+        <hr />
+        <p>The HTML DOM is a standard <b>objec</b>t model and <b>programming interface</b> for HTML. It defines:</p>
+            <ul>
+                <li>The HTML elements as <b>objects</b></li>
+                <li>The <b>properties</b> of all HTML elements</li>
+                <li>The <b>methods</b> to access all HTML elements</li>
+                <li>The <b>events</b> for all HTML elements</li>
+            </ul>
+        <p>In other words: <b>The HTML DOM is a standard for how to get, change, add, or delete HTML elements.</b></p>
+    </div>
+</body>
+</html>
