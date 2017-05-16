@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shvets Interactive Resume</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
+    <div class="container-fluid" style="background: url(img/background.jpg) no-repeat center bottom fixed;
+    background-size: cover;
+    height: 100vh;">
+        <div class="cont">
+            <h1>Alina Shvets</h1>
+            <h3>Interactive Resume</h3>
+        </div>
+            <a href="#profile" class="start">
+            <span class="glyphicon glyphicon-chevron-down"></span>
+            </a>
+    </div>
+    <div class="overlay"></div>
+
+    <div class="container-fluid"><div class="row">
+        <nav class="col-sm-3" id="myScrollspy">
+            <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="650">
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="col-sm-9">
+            <div id="profile">
+            <a name="#profile"></a>
+                <div class="container-item">
+                    <h3>About</h3>
+                    <h4>Starting a Career in Web Development</h4>
+                    <div>
+                        Куки это классический способ хранения простых строчных данных внутри документа. Обычно куки отсылаются с сервера на клиент, который может сохранять их, а затем отправлять обратно на сервер в ответ на последующие запросы. Это может быть использовано для таких вещей, как управление сессиями аккаунта или отслеживание пользовательской информации.
+                    </div>
+                </div>  
+            </div>
+            <div id="works"> 
+             <div class="container-item">
+                    <div>
+                        Локальное хранилище это одна из разновидностей Web Storage API, специального API для хранения данных в браузере в формате ключ-значение. Этот API был создан как решение для проблем с куки и является более интуитивным и безопасным способом хранения простых данных внутри браузера.
+                    </div>
+                </div>  
+            </div>        
+            <div id="contact">
+                <div class="container-item">
+                    <h3>Contact Form</h3>
+                    <div>
+                        Сессионное хранилище это вторая разновидность Web Storage API. Оно точно такое же как и локальное хранилище за исключением того, что данные хранятся только для сессии вкладки браузера. Как только пользователь уходит со страницы и закрывает браузер, данные очищаются.
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

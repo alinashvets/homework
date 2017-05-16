@@ -1,0 +1,138 @@
+@font-face {
+	font-family: CourierNewPS;
+	src: url(fonts/CourierNewPS.ttf);
+}
+@font-face {
+	font-family: CourierNewPSMT;
+	src: url(fonts/CourierNewPSMT.ttf);
+}
+@font-face {
+	font-family: 'Glyphicons Halflings';
+	src: url(/fonts/glyphicons-halflings-regular.ttf);
+}
+@keyframes pulse {
+    0%{padding-top: 26px;}
+    25%   {padding-top: 34px;}
+    50%  {padding-top: 26px;}
+    75%  {padding-top: 34px;}
+    100% {padding-top: 26px;}
+}
+
+.container-fluid {
+  	position: relative;
+}
+.overlay {
+	background-color: #4C6A92;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0.70;
+	z-index: 2;
+	height: 100vh
+}
+.cont {
+	position: relative;
+	color: #fff;
+	z-index: 3;
+	text-align: center;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 840px;
+    max-width: 100%;
+
+}
+.cont h1 {
+	font-family: CourierNewPS;
+	font-size: 450%;
+	border-bottom: 1px solid #fff;
+	display: inline-block;
+}
+.cont h3 {
+	font-family: CourierNewPSMT;
+	font-size: 200%;
+	display: block;
+	margin: 0;
+}
+.start {
+	background-color: #1b191c;
+	position: absolute;
+    width: 110px;
+    height: 90px;
+    right: 5%;
+    bottom: 0;
+    border: none;
+    z-index: 3;
+	text-align: center;
+}
+.glyphicon {
+	color: #fff;
+	font-size: 30px;
+	font-weight: bold;
+	animation-name: pulse;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+.affix {
+    top: 0;
+}
+.col-sm-3 {
+  	float: right;
+}
+div.col-sm-9 {
+	padding: 0;
+/*	width: 100%;*/
+}
+div.col-sm-9 .container-item {
+    height: 100vh;
+    padding: 20px;
+}
+nav#myScrollspy.col-sm-3 {
+  	right: 5%;
+  	padding: 0;
+  	width: 110px;
+}
+.nav li  a {
+	height: 90px;
+	width: 110px;
+	line-height: 90px;
+	padding: 0;
+	background-color: #1b191c;
+	color: #fff;
+	font-family: CourierNewPS;
+	font-size: 18px;
+	text-align: center;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+	color: #9a9a9a;
+	background-color: #1b191c;
+}
+.nav-pills > li > a {
+  	border-radius: 0;
+}
+.nav-stacked > li + li {
+  	margin-top: 0;
+}
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+	width: 110px;
+	background-color: #4C6A92;
+	opacity: 0.70;
+}
+#profile h3, #contact h3 {
+	font-family: CourierNewPS;
+	font-size: 36px;
+	color: #080253;
+	margin: 36px 0;
+	text-align: center;
+}
+#profile h4 {
+	font-family: CourierNewPSMT;
+	font-size: 24px;
+	color: #282828;
+	margin-bottom: 36px;
+	text-align: center;
+}
