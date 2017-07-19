@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Interactive Resume</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="atlast.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    function autoType(elementClass, typingSpeed){
+  var thhis = $(elementClass);
+  thhis.css({
+    "position": "relative",
+    "display": "inline-block"
+  });
+  thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+  thhis = thhis.find(".text-js");
+  var text = thhis.text().trim().split('');
+  var amntOfChars = text.length;
+  var newString = "";
+  thhis.text("|");
+  setTimeout(function(){
+    thhis.css("opacity",1);
+    thhis.prev().removeAttr("style");
+    thhis.text("");
+    for(var i = 0; i < amntOfChars; i++){
+      (function(i,char){
+        setTimeout(function() {        
+          newString += char;
+          thhis.text(newString);
+        },i*typingSpeed);
+      })(i+1,text[i]);
+    }
+  },1500);
+}
+
+$(document).ready(function(){
+  // Now to start autoTyping just call the autoType function with the 
+  // class of outer div
+  // The second paramter is the speed between each letter is typed.   
+  autoType(".type-js",150);
+
+  
+});
+</script>
+    <section class="main-container">
+        <div class="containers">
+
+            <div class="container container-left">
+                <div class="block-inner">
+                    <div class="content content-exp">
+                          <div class="content-header">
+                            <h2><span>exp</span>erience</h2>
+                        </div>
+
+                        <div class="content-inner">
+                        <p>Basic theoretical knowledge and a little experience with HTML/CSS, JavaScript, jQuery, Bootstrap, Git and Github, Gulp, Sass, Responsive Web, BEM.</p> 
+                        <p>Experience with OS Windows, Linux/Ubuntu; proficiency in MS Offic, Google Drive, Prezi, Adobe Photoshop, Google Web Designer.</p> 
+                        <p> An expert in Link Building for SEO.</p>
+                        </div>
+                    </div>
+                    <div class="content content-edu">
+                          <div class="content-header">
+                            <h2><span>edu</span>cation</h2>
+                        </div>
+
+                        <div class="content-inner">
+                        
+                        <p>PHP Academy, Front-End Development, 01/2017 - present</p>
+                        <p>Main Academy, Programming Basics, 02/2016 - 03/2016
+                        </p>
+                        <p>Taras Shevchenko National University of Kyiv, International Tourism, Master's degree, 2009 - 2015</p>
+                        </div>
+                    </div>
+                    <div class="content content-why">
+                        <div class="content-header">
+                            <h2><span>why</span> me</h2>
+                        </div>
+
+                        <div class="content-inner">
+                        <p>I consider myself as a hard-working, active, motivated person with self-directed learning skills. I am eager to combine my previous experience with my passion for this career field in order to work hard and make a meaningful contribution. And I believe that it is possible to achieve career success not only in the area where you have a positive work experience or relevant university degree.</p></div>
+                    
+                    </div>
+                </div>
+            </div>
+
+            <div class="container container-right">
+                <div class="block-inner">
+                    <div class="block-content">
+                    <!-- <div class="btn">contact me</div>
+                        <div class="social">
+                            <a href="https://www.facebook.com/alina.povoroznyk" target="_blank" class="fb">&#032;</a><a href="https://www.linkedin.com/in/alinashvets/" target="_blank" class="ln">&#032;</a>
+                        </div>   -->
+                    <div class="type-js headline">
+  <h1 class="text-js">Hi, my name is Alina,
+and I'm eager to start my career with a growth-oriented firm as a Trainee/Junior Front-End Developer</h1>
+  
+</div>
+                       <!--  <h1>Hi, my name is <span>Alina</span>, </h1>
+                        <h3>and I'm eager to start my career with a growth-oriented firm as a <span>Trainee/Junior Front-End Developer</span></h3> -->
+                        
+                    </div>
+                    <div class="block-bgimage"></div>
+                </div>
+                
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
+
+
